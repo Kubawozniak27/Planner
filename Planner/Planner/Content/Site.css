@@ -93,9 +93,14 @@ input:-ms-input-placeholder {
 
 
 .text-danger {
+<<<<<<< HEAD
     color: seashell;
     font-weight: bold;
     font-size: 17px;
+=======
+    color: whitesmoke;
+    font-weight: bold;
+>>>>>>> master
 }
 
 
@@ -208,6 +213,7 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
 .loginBtn--google:hover,
 .loginBtn--google:focus {
     background: #E74B37;
+<<<<<<< HEAD
 }
 
 
@@ -218,4 +224,6 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
     left: 0;
     padding: 1rem;
     text-align: center;
+=======
+>>>>>>> master
 }
