@@ -79,6 +79,22 @@ namespace Planner.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Account name")]
+        public string AccountName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "First name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Last name")]
+        public string LastName { get; set; }
     }
 
     public class ResetPasswordViewModel
