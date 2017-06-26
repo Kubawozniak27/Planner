@@ -19,7 +19,7 @@ namespace Planner.Models
         [StringLength(255)]
         public string Venue { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public int CategoryId { get; set; }
 
