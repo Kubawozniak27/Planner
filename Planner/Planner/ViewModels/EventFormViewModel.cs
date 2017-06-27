@@ -34,6 +34,12 @@ namespace Planner.ViewModels
         [DataType(DataType.Upload)]
         public HttpPostedFileBase ImageUpload { get; set; }
 
+
+        [Required]
+        [StringLength(500)]
+        public string Description { get; set; }
+
+
         public DateTime GetDateTime()
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));

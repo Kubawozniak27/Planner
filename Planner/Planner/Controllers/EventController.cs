@@ -62,6 +62,7 @@ namespace Planner.Controllers
             var eventVar = new Event()
             {
                 Name = viewModel.Name,
+                Description = viewModel.Description,
                 DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Venue = viewModel.Venue,

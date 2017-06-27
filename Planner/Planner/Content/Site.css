@@ -2,6 +2,8 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url('Image/backgroud.jpg');
+    position: relative;
+    color: aliceblue;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -32,7 +34,9 @@ textarea {
     height: 50px;
     
 }
-
+span {
+    color: aliceblue;
+}
 input::-webkit-input-placeholder {
     color: black !important;
 }
@@ -218,6 +222,10 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
     left: 0;
     padding: 1rem;
     text-align: center;
+    position:absolute;
+    bottom:0;
+    height:1%;   /* Height of the footer */
+
 }
 
 
@@ -266,4 +274,8 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
 
 .gigs > li .details .genre {
     font-size: 15px;
+}
+
+#Description {
+    min-width: 100%;
 }

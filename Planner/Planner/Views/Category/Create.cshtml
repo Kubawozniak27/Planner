@@ -1,0 +1,27 @@
+﻿@model Planner.Models.Category
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<h2>Add a category</h2>
+@using (Html.BeginForm())
+{
+    <p class="alert alert-info">Name field is <strong>required</strong>.</p>
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label style="color: aliceblue">Name</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+
+
+    <br />
+    <button type="submit" class="btn btn-primary">Add</button>
+}
+
+
+
+

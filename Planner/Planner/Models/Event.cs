@@ -28,9 +28,10 @@ namespace Planner.Models
 
         public int ImageId { get; set; }
 
-       
 
-       
+        [Required]
+        [StringLength(500)]
+        public string Description { get; set; }
 
 
     }

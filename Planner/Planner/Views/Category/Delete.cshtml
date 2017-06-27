@@ -1,0 +1,23 @@
+﻿@model Planner.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h4>Are you sure you want to delete category: "@Model.Name"?</h4>
+<div>
+    
+
+   
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            
+        </div>
+    }
+</div>

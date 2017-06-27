@@ -29,6 +29,7 @@
         @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "eg 20:00" })
         @Html.ValidationMessageFor(m => m.Time)
     </div>
+  
     <div class="form-group">
         <label style="color: aliceblue">Category</label>
         @Html.DropDownListFor(m => m.Category, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "form-control" })
@@ -36,8 +37,18 @@
     </div>
     <div>
         <label style="color: aliceblue">Image</label>
-        @Html.TextBoxFor(m => m.ImageUpload, new { type = "file" ,style="color:aliceblue"})
+        @Html.TextBoxFor(m => m.ImageUpload, new { type = "file" ,style="color:aliceblue",@class="btn btn-primary" })
     </div>
+
+    <div class="form-group">
+        <label style="color: aliceblue">Description</label>
+        @Html.TextAreaFor(m => m.Description,5,20, new { @class = "form-control", placeholder = "Describe for this event..."})
+        @Html.ValidationMessageFor(m => m.Time)
+    </div>
+    <div>
+        
+    </div>
+    <br/>
     <button type="submit" class="btn btn-primary">Add</button>
 }
 @section scripts

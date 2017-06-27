@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Planner.Models.Category>
+
+
+<h2>@Html.ActionLink("Add a category", "Create")</h2>
+
+<table>
+    <p style="font-weight: bold;font-size: larger">Name category</p>
+    @{
+        var counter = 0;
+    }
+    @foreach (var item in Model)
+    { counter++;
+
+        <div class="row">
+            <div class="col-sm-3">
+                <p style="font-size: 17px;">
+                    @counter @Html.DisplayFor(modelItem => item.Name)
+                </p>
+            </div>
+            
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id },new {style="font-size:20px;"})
+                or
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { style = "font-size:20px;" })
+            </div>
+        </div>
+        
+    
+
+
+      
+
+        
+       
+    }
+
+</table>
