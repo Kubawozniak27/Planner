@@ -5,7 +5,7 @@
 }
 
 <h2>Add an event</h2>
-@using (Html.BeginForm("Create", "Event"))
+@using (Html.BeginForm("Create", "Event", null, FormMethod.Post ,new { enctype = "multipart/form-data" }))
 {
     <p class="alert alert-info">All fields are <strong>required</strong>.</p>
     @Html.AntiForgeryToken()
@@ -33,6 +33,10 @@
         <label style="color: aliceblue">Category</label>
         @Html.DropDownListFor(m => m.Category, new SelectList(Model.Categories, "Id", "Name"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Category)
+    </div>
+    <div>
+        <label style="color: aliceblue">Image</label>
+        @Html.TextBoxFor(m => m.ImageUpload, new { type = "file" ,style="color:aliceblue"})
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
 }

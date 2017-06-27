@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace Planner.ViewModels
 {
@@ -27,8 +28,11 @@ namespace Planner.ViewModels
 
         public IEnumerable<Category> Categories { get; set; }
 
+        [Required]
+        public int Image { get; set; }
 
-     
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase ImageUpload { get; set; }
 
         public DateTime GetDateTime()
         {

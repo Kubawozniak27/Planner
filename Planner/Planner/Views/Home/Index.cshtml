@@ -4,7 +4,7 @@
     @foreach (var item in Model)
     {
         <li>
-
+        
             <div class="date">
                 <div class="month">
                     @item.DateTime.ToString("MMM")
@@ -14,14 +14,18 @@
                 </div>
             </div>
             <div class="details">
-                <span class="artist">
+                <span class="artist" style="color: aliceblue">
                     @item.Name
                 </span>
-                <span class="genre">
+                <span class="genre" style="color: aliceblue">
                     @item.Category.Name
                 </span>
-                <button class="btn btn-primary btn-sm">Going?</button>
+                
             </div>
+            <div>
+                <img src=@Url.Content(item.Image.ImageUrl) height="150" width="150"/>
+            </div>
+            <button class="btn btn-primary btn-sm">Going?</button>
         </li>
     }
 </ul>
